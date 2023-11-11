@@ -1,0 +1,5 @@
+menu "Component drv_timer Configuration"
+    config USE_PERIODIC_TASK
+        bool "Use Periodic Task For time Callbacks"
+            default n
+endmenu
