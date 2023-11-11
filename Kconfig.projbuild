@@ -1,5 +1,11 @@
 menu "Component drv_timer Configuration"
-    config USE_PERIODIC_TASK
-        bool "Use Periodic Task For time Callbacks"
+
+    config DRV_TIMER_USE
+        bool "Use drv_timer component"
+            default y
+
+    config DRV_TIMER_USE_PERIODIC_TASK
+        bool "Use Periodic Task For time Callbacks. Otherwise used timer interrupt directly"
             default n
+
 endmenu

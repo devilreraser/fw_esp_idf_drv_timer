@@ -180,7 +180,7 @@ static void oneshot_timer_callback(void* arg)
     //TickType_t one_shot_ticks = one_shot_ms / (1000 / configTICK_RATE_HZ);
 
     int64_t time_since_boot = esp_timer_get_time();
-    ESP_LOGI(TAG, "One-shot timer called, time since boot: %lld us | one_shot:%u ms", time_since_boot, one_shot_ms);
+    ESP_LOGI(TAG, "One-shot timer called, time since boot: %lld us | one_shot:%u ms", time_since_boot, (unsigned int)one_shot_ms);
 
     // esp_timer_handle_t periodic_timer_handle = (esp_timer_handle_t) arg;
     // /* To start the timer which is running, need to stop it first */
