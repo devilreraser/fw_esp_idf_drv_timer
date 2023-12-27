@@ -55,7 +55,7 @@ void drv_timer_periodic_function_allow(drv_timer_periodic_function_t function);
 void drv_timer_periodic_function_register(drv_timer_periodic_function_t function);
 void drv_timer_periodic_function_deregister(drv_timer_periodic_function_t function);
 void drv_timer_periodic_task_init(uint32_t delay_ms);
-
+void drv_timer_init(void);
 void drv_timer_periodic_init(uint32_t delay_ms);
 void drv_timer_periodic_stop(void);
 void drv_timer_one_shot_init(uint32_t delay_ms);

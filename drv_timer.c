@@ -171,7 +171,7 @@ static void periodic_timer_callback(void* arg)
 
 
     int64_t time_since_boot = esp_timer_get_time();
-    ESP_LOGD(TAG, "Periodic timer called, time since boot: %lld us", time_since_boot);
+    ESP_LOGV(TAG, "Periodic timer called, time since boot: %lld us", time_since_boot);
 }
 
 static void oneshot_timer_callback(void* arg)
@@ -192,7 +192,10 @@ static void oneshot_timer_callback(void* arg)
 
 
 
-
+void drv_timer_init(void)
+{
+    esp_log_level_set(TAG, ESP_LOG_INFO);
+}
 
 
 
